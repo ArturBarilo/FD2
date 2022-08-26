@@ -1,42 +1,42 @@
 'use strict';
 
-// alert('Hello!!');
+alert('Hello!!');
 
-// console.log('Hello');
-// console.log('Hello');
+console.log('Hello');
+console.log('Hello');
 
-// let a = 'notebook';
-// console.log(a);
+let a = 'notebook';
+console.log(a);
 
-// a = 'apple';
-// console.log(a);
+a = 'apple';
+console.log(a);
 
-// const bTrue = true;
-// const bFalse = false;
+const bTrue = true;
+const bFalse = false;
 
-// const arr = [1, 2, 3];
+const arr = [1, 2, 3];
 
-// const user = {
-//     name: "John",
-// };
+const user = {
+    name: "John",
+};
 
-// console.log(arr);
-// console.log(user);
+console.log(arr);
+console.log(user);
 
-// let newVar;
+let newVar;
 
-// if (bTrue) {
-//     newVar = 'test';
-//     console.log('здесь true')
-// };
+if (bTrue) {
+    newVar = 'test';
+    console.log('здесь true')
+};
 
-// console.log(newVar)
+console.log(newVar)
 
-// if (a === 'apple') {
-//     console.log('a === apple is true')
-// } else {
-//     console.log('False')
-// };
+if (a === 'apple') {
+    console.log('a === apple is true')
+} else {
+    console.log('False')
+};
 
 
 
