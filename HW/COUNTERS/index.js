@@ -34,3 +34,4 @@ console.log(decrease());
 console.log(decrease(5));
 console.log(decrease(50));
 console.log(decrease(100)); 
+
