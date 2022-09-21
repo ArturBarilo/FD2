@@ -134,6 +134,7 @@ function example3() {
         console.log(`is number "${number}" in storage? (${storage.has(number)})`);
     }
     console.log(storage.size);
+    console.log(storage);
 
     console.log('end example3');
 }
@@ -244,7 +245,7 @@ function example5() {
 (function () {
     // example1();
     // example2();
-    // example3();
+    example3();
     // example4();
-    example5();
+    // example5();
 })()

@@ -1,7 +1,8 @@
 'use strict';
 
-function vowelsCounter() {
-    const text = prompt('Введите строку');
+const text = prompt('Введите строку');
+
+function vowelsCounter(text) {
 
     const textInLowerCase = text.toLowerCase();
 
@@ -16,8 +17,8 @@ function vowelsCounter() {
             result.push(letter);
         }
     }
-    return console.log('Количество гласных букв в строке:', result.length);
+    return result.length;
 
 }
 
-vowelsCounter();
+console.log(vowelsCounter(text));
