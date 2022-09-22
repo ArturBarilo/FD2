@@ -30,7 +30,7 @@ function example2() {
 
      const myCar = new Car('AAA-BBB-111');
      console.log(myCar)
-     console.log('myCar', myCar.number);
+     console.log('myCar.number', myCar.number);
      myCar.signal();
      console.log('---');
      
@@ -203,8 +203,8 @@ function example5() {
 
 (function () {
     // example1();
-    // example2();
+    example2();
     // example3();
-    example4();
+    // example4();
     // example5();
 })()
