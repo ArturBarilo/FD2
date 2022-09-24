@@ -185,7 +185,7 @@ function example4() {
     }
 
     const figure = new Figure('my-type');
-    console.log('figure', figure);
+    // console.log('figure', figure);
 
     // figure.calcPerimetr();
 
@@ -226,8 +226,23 @@ function example4() {
         }
     }
 
-    calcPerimetrRatio(new Triangle(1, 2, 3));
-    calcPerimetrRatio(new Rectangle(5, 4));
+    // calcPerimetrRatio(new Triangle(1, 2, 3));
+    // calcPerimetrRatio(new Rectangle(5, 4));
+    
+    const triangle = new Triangle(1, 2, 3);
+    console.log('triangle', triangle);
+    console.log('triangle.calcPerimetr()', triangle.calcPerimetr());
+    console.log('triangle.calcSquare()', triangle.calcSquare());
+    console.log('calcPerimetrRatio(triangle)', calcPerimetrRatio(triangle))
+    console.log('---');
+
+    const rectangle = new Rectangle(4, 5);
+    console.log('rectangle', rectangle);
+    console.log('rectangle.calcPerimetr()', rectangle.calcPerimetr());
+    console.log('rectangle.calcSquare()', rectangle.calcSquare());
+    console.log('calcPerimetrRatio(rectangle)', calcPerimetrRatio(rectangle));
+    console.log('---');
+
 
     
     
