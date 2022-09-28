@@ -225,9 +225,6 @@ function example4() {
             return this.a * this.b;
         }
     }
-
-    // calcPerimetrRatio(new Triangle(1, 2, 3));
-    // calcPerimetrRatio(new Rectangle(5, 4));
     
     const triangle = new Triangle(1, 2, 3);
     console.log('triangle', triangle);
