@@ -1,6 +1,7 @@
 'use strict';
 
 function example1() {
+    console.log('start example1');
     
 
     console.log('');
