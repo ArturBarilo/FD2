@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM1</title>
+</head>
+<body>
+    <p id = 'first-paragraph'>Lorem ipsum <span>dolor</span>, sit amet consectetur <span>adipisicing</span> elit. Hic illum accusamus tempore magnam rerum. Veritatis, dolor, reprehenderit rem ab, libero similique unde ea debitis vitae incidunt mollitia aliquam? Dicta, nam.</p>
+    <p class = test1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla reprehenderit illum soluta. Vero illo aliquid fugit, cumque natus aliquam in facilis sed nisi voluptates dignissimos expedita nemo deserunt quibusdam provident.</p>
+    <p class="test1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla reprehenderit illum soluta. Vero illo aliquid fugit, cumque natus aliquam in facilis sed nisi voluptates dignissimos expedita nemo deserunt quibusdam provident.</p>
+    <br>
+    <div name = 'paragraph-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat magnam ex voluptatibus nesciunt eius sit ratione labore adipisci voluptatem iste dignissimos pariatur dolore est assumenda quae, culpa cumque mollitia iure.</div>
+    <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+    <br>
+
+    <button onClick="buttonHandler()">Button</button>
+    <div id="date"></div>
+    <button onClick="alert('Hello')">Button hello</button>
+
+    <script>
+        const paragraph2 = document.getElementsByTagName('p');
+        console.log('document.getElementsByTagName(\'p\')', paragraph2);
+        console.log('document.getElementById(\'first-paragraph\')', document.getElementById('first-paragraph'));
+        console.log('document.getElementsByClassName(\'test1\')', document.getElementsByClassName('test1'));
+        console.log('document.getElementsByName(\'paragraph-4\')', document.getElementsByName('paragraph-4'));
+        console.log('document.querySelector(\'.test1\')', document.querySelector('.test1'));
+        console.log('document.querySelectorAll(\'.test1\')', document.querySelectorAll('.test1'));
+
+        const paragraph = document.getElementById('first-paragraph');
+        paragraph.innerHTML = '<b>[was removed]</b>';
+        //p.children //- дочерние тэги
+        //p.childNodes //- с текстом
+        //p.firstChild
+        //p.firstElementChild
+        //p.lastChild
+        //p.lastElementChild
+
+        //p.style
+        //p.style.fontSize = "10px"
+        //p.style.display = 'none'
+        //p.style.display = 'block'
+        //p.style.cssText = "background-color: silver; padding: 10px; font-size: 10px"
+
+        //pTest1 = document.getElementsByClassName('test1')[0]
+        //Array.from(pTest1.classList.values())
+
+        //pTest1.classList.add('js-class')
+        //pTest1.classList.remove('js-class')
+        //pTest1.classList.add('js-class')
+        //pTest1.classList.replace('js-class', 'js-class-1')
+        //pTest1.classList.toggle('js-class')
+
+        function buttonHandler() {
+            // console.log('buttonHandler');
+            const dateElement = document.getElementById('date');
+            dateElement.textContent = new Date();
+        }
+    </script>
+</body>
+</html>
