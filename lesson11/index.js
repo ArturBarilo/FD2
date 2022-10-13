@@ -79,7 +79,7 @@ function example3() {
     }
 
     function isEmail(str = '') {
-        const regex = /[a-zA-Z0-9\$\-]+@\[a-zA-Z0-9]\.\[a-zA-Z0-9]/;
+        const regex = /^[a-zA-Z0-9\$\-]+@\[a-zA-Z0-9]\.\[a-zA-Z0-9]$/;
         return regex.test(str);
     }
 

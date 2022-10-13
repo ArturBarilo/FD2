@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form name="myForm" action="https://fe.it-academy.by/TestForm.php" method="post">
+        <label>
+            Email:
+            <input
+            id = "email"
+            name ="email"
+            placeholder="test@email.com"/></label><br>
+         <label for="password">Password</label>
+        <input
+        id="password"
+         name ="password" 
+         placeholder="********" 
+         type="password"/><br>
+
+         <select name="my-select">
+            <option value="tech">Техника</option>
+            <option value="home">Дом</option>
+            <option value="office">Офис</option>
+         </select>
+         <br>
+
+         <label>
+            <input
+            type="radio"
+            id="radio-free"
+            checked/>
+            Free
+         </label>
+         <label>
+            <input
+            type="radio"
+            id="radio-payed"/>
+            Payed
+         </label>
+         <label>
+            <input
+            type="radio"
+            id="radio-vip"/>
+            VIP
+         </label>
+         <br>
+
+         <textarea>Some text</textarea>
+         <br>
+        <input
+         name ="agreed" 
+         type="checkbox"/><br>
+        <button type="button" name="myButton">Button</button>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <script>
+        const inputEmail = document.getElementById('email');
+        console.log(inputEmail);
+        
+        console.log(document.forms);
+        const form = document.forms['myForm'];
+        console.log(form);
+        console.log('form.elements', form.elements);
+        console.log('');
+
+        const email = form.elements[0];
+        email.setAttribute('custom-attr', 'custom-value');
+
+        // function buttonHandler1() {
+        //     console.log('form.myButton.onclick = buttonHandler1');
+        // }
+
+        function buttonHandler2() {
+            console.log("form.myButton.addEventListener('click', buttonHandler2)");
+            console.log('form.email.value', form.email.value);
+            console.log('form.password.value', form.password.value);
+            form.password.value = '';
+            form.agreed.checked = true;
+        }
+ 
+        // form.myButton.onclick = buttonHandler1;
+        form.myButton.addEventListener('click', buttonHandler2);
+        
+    </script>
+
+    
+    
+</body>
+</html>

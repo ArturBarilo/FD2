@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM1</title>
+</head>
+<body>
+    <p class = 'test1'>Lorem ipsum sit amet consectetur  elit. Hic illum accusamus tempore magnam rerum. Veritatis, dolor, reprehenderit rem ab, libero similique unde ea debitis vitae incidunt mollitia aliquam? Dicta, nam.</p>
+    <p id = second-paragraph>Lorem ipsum <span>dolor</span>, sit amet consectetur <span>adipisicing</span> elit. Hic illum accusamus tempore magnam rerum. Veritatis, dolor, reprehenderit rem ab, libero similique unde ea debitis vitae incidunt mollitia aliquam? Dicta, nam.</p>
+    <div id="output"></div>
+    <div data-number="1" data-name="John" data-lastName="Doe" id="div-with-data"></div>
+    
+    
+    
+    
+    
+    <script>
+        function buttonHandler() {
+            console.log('buttonHandler1');
+        }
+
+        const divWithData = document.getElementById('div-with-data');
+        console.log('divWithData.dataset', divWithData.dataset);
+        console.log('divWithData.dataset', divWithData.dataset.lastname);
+
+        
+        const paragraph = document.getElementById('second-paragraph');
+        // paragraph.innerHTML = '<b>[was removed]</b>';
+        console.log('paragraph.childNodes', paragraph.childNodes);
+
+        const output = document.getElementById('output');
+        const myText = document.createTextNode('some text123');
+        console.log('myText', myText);
+        
+        paragraph.appendChild(myText);
+        
+        // const myBoldText = document.createElement('b');
+        // myBoldText.innerText = 'bold text';
+        // paragraph.appendChild(myBoldText);
+
+        // const myButton = document.createElement('button');
+        // myButton.innerText = 'text';
+        // myButton.onclick = buttonHandler;
+
+        const isButton = true;
+
+        let elenent = null;
+        if (isButton) {
+            element = document.createElement('button');
+            element.innerText = 'text';
+            element.onclick = buttonHandler;
+        } else {
+            const text = prompt('enter your text:');
+            element = document.createElement('b');
+            element.innerText = text || 'bold text';
+        }
+        const mySpan = document.createElement('span');
+        mySpan.appendChild(element);
+        paragraph.appendChild(mySpan);
+
+        // paragraph.insertBefore(mySpan, myText); 
+        // paragraph.nextSibling(mySpan, myText); 
+        // paragraph.replaceChild(mySpan, myText);
+        // paragraph.removeChild(myText);
+
+        const cloneParagraph = paragraph.cloneNode(true);
+        cloneParagraph.removeAttribute('id');
+        // cloneParagraph.setAttribute('id', 'new-id');
+        cloneParagraph.innerHTML += 'cloned';
+        paragraph.parentNode.insertBefore(cloneParagraph, paragraph.nextSibling);
+        
+
+
+
+       
+
+        
+
+    </script>
+</body>
+</html>
